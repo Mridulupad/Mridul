@@ -6,13 +6,13 @@ const assets = [
   "/app.js",
   "/coffee1.jpg",
   "/coffee2.jpg",
-  "coffee3.jpg",
-  "coffee4.jpg",
-  "coffee5.jpg",
-  "coffee6.jpg",
-  "coffee7.jpg",
-  "coffee8.jpg",
-  "coffee9.jpg"
+  "/coffee3.jpg",
+  "/coffee4.jpg",
+  "/coffee5.jpg",
+  "/coffee6.jpg",
+  "/coffee7.jpg",
+  "/coffee8.jpg",
+  "/coffee9.jpg"
 ];
 
 self.addEventListener("install", installEvent => {
