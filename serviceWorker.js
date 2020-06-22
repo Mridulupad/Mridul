@@ -2,8 +2,8 @@ const staticDevCoffee = "dev-coffee-site-v1"
 const assets = [
   "/",
   "/index.html",
-  "/style.css",
-  "/app.js",
+  "/css/style.css",
+  "/js/app.js",
   "/images/coffee1.jpg",
   "/images/coffee2.jpg",
   "/images/coffee3.jpg",
@@ -30,12 +30,13 @@ self.addEventListener("fetch", fetchEvent => {
     )
   })
 //   self.addEventListener('fetch', function(event) {});
-if ('serviceWorker' in navigator) {
-    console.log("Will the service worker register?");
-    navigator.serviceWorker.register('service-worker.js')
-      .then(function(reg){
-        console.log("Yes, it did.");
-     }).catch(function(err) {
-        console.log("No it didn't. This happened:", err)
-    });
- }
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent the mini-infobar from appearing on mobile
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI notify the user they can install the PWA
+  showInstallPromotion();
+});
