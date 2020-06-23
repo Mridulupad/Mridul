@@ -25,15 +25,15 @@ const coffees = [
     image: "/383133.jpg"
   },
   {
-    name: "Inventore",
+    name: "Coming Soon",
     image: "/coffee7.jpg"
   },
   {
-    name: "Veritatis",
+    name: "Coming Soon",
     image: "/coffee8.jpg"
   },
   {
-    name: "Accusantium",
+    name: "Coming Soon",
     image: "/coffee9.jpg"
   }
 ];
